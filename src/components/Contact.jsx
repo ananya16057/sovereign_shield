@@ -5,8 +5,6 @@ const contactMethods = [
     id: 1,
     title: "Software Warehouse",
     desc: "Request credentials, API keys, or direct access to our secure software vault and repositories.",
-    actionText: "Request Access",
-    actionLink: "mailto:warehouse@indiainnovates.com?subject=Warehouse%20Access%20Request",
     themeColor: "#00ccff", // Cyan
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -21,8 +19,6 @@ const contactMethods = [
     id: 2,
     title: "Safe Delivery & Deployment",
     desc: "Coordinate encrypted handoffs, zero-trust deployments, and secure enterprise integration.",
-    actionText: "Schedule Delivery",
-    actionLink: "mailto:deployment@indiainnovates.com?subject=Safe%20Delivery%20Inquiry",
     themeColor: "#00fa9a", // Neon Green
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -36,8 +32,6 @@ const contactMethods = [
     id: 3,
     title: "Threat Response Team",
     desc: "Experiencing an anomaly? Connect directly with our live defense engineers for rapid mitigation.",
-    actionText: "Open Secure Channel",
-    actionLink: "tel:+910000000000", // Replace with a real phone number or Discord link
     themeColor: "#ff4444", // Red
     icon: (
       <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -68,15 +62,8 @@ const Contact = () => {
               {method.icon}
             </div>
             <h3 className="contact-card-title">{method.title}</h3>
-            <p className="contact-card-desc">{method.desc}</p>
-            
-            <a href={method.actionLink} className="contact-action">
-              {method.actionText}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            {/* I removed the min-height requirement here since there are no buttons to align anymore */}
+            <p className="contact-card-desc" style={{ marginBottom: 0 }}>{method.desc}</p>
           </div>
         ))}
       </div>
