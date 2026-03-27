@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         
         <div className="footer-logo">
-          AEGIS<span>_BHARAT</span> // TIER-1 SECURE
+          AEGIS<span>_BHARAT</span> 
         </div>
 
         <div className="footer-copyright">
